@@ -32,7 +32,7 @@ python3 align.py audio.mp3 words.txt
 
 The default behaviour outputs the JSON to stdout.  See `python3 align.py --help` for options.
 
-## Using Gentle for a batch of audios and save the output
+## Using Gentle for a batch of audios and saving the output
 
 Gentle could also be run for a batch of audios and the output would be saved as .json file.
 
