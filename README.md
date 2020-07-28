@@ -31,3 +31,18 @@ python3 align.py audio.mp3 words.txt
 ```
 
 The default behaviour outputs the JSON to stdout.  See `python3 align.py --help` for options.
+
+## Using Gentle for a batch of audios and saving the output
+
+Gentle could also be run for a batch of audios and the output would be saved as .json file.
+
+The sound file and transcript files are saved in separate folders. (e.g. sound files are at `datasetA/wavs` and transcripts are at `datasetA/txt`)
+
+The name of text files should be aligned with the wavs; meaning the text file corresponding to a wav file should have the same name. The notebook named [make_data_for_webalign.ipynb](make_data_for_webalign.ipynb) can be referred for this.
+
+Example:
+```bash
+python align_batch.py --wav_pattern="datasetA/wavs/*.wav" --txt_pattern="datasetA/txt/*.txt" --output_dir temp/
+```
+Here, we have given the wave and text file patterns. The output directory which saves the json output is also provided.
+See `python3 align_batch.py --help` for options.
